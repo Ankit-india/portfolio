@@ -7,22 +7,22 @@ const Header = () => {
     {
       id: 1,
       name: "Home",
-      route: "/home",
+      route: "/portfolio/",
     },
     {
       id: 2,
       name: "Projects",
-      route: "/projects",
+      route: "/portfolio/",
     },
     {
       id: 3,
       name: "Skills",
-      route: "/skills",
+      route: "/portfolio/",
     },
     {
       id: 4,
       name: "About",
-      route: "/about",
+      route: "/portfolio/",
     },
   ]);
 

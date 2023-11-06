@@ -13,14 +13,16 @@ const About = () => {
     nostrum ipsa accusamus modi pariatur mollitia sed assumenda.
     Quaerat esse doloremque sequi aspernatur deleniti similique
     labore!`,
-    buttonText: "Read More..."
+    buttonText: "Read More...",
   });
 
   return (
     <>
       {/* <h1>This is an ABout Seciton Of ANKIT KUMAR</h1> */}
       <div className="main-container bg-gray-100 w-full py-16 ">
-        <h1 className="text-5xl pb-16 underline text-center font-bold">ABOUT ME</h1>
+        <h1 className="text-5xl pb-16 underline text-center font-bold">
+          ABOUT ME
+        </h1>
         <div className="flex justify-center items-center">
           {/* image comtainer  */}
           <div className="w-full flex justify-center">
@@ -36,14 +38,9 @@ const About = () => {
               <h1 className="text-5xl font-semibold">{data.title}</h1>
               <p>{data.desc1}</p>
               <p>{data.desc2}</p>
-              <div>
-                <a
-                  href="/read"
-                  className="px-4 py-2 bg-blue-600 text-white rounded-full shadow-lg hover:text-blue-900"
-                >
-                  {data.buttonText}
-                </a>
-              </div>
+              <button className="px-4 py-2 bg-blue-600 text-white rounded-full shadow-lg hover:text-blue-900">
+                {data.buttonText}
+              </button>
             </div>
           </div>
         </div>

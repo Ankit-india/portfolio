@@ -1,7 +1,8 @@
 import bannerImage from "../assets/bi1.png";
 import bannerBackground from "../assets/banner_wallpaper.svg";
 import Typed from "typed.js";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import ContactModal from "./ContactModal";
 
 const Banner = () => {
   const el = useRef(null);
@@ -26,6 +27,22 @@ const Banner = () => {
       typed.destroy();
     };
   }, []);
+
+  // const [contactMe, setContactMe] = useState(false);
+
+  // const handleContactMeClick = () => {
+  //   setContactMe(true);
+  // };
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleContactMeClick = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <div
@@ -63,6 +80,7 @@ const Banner = () => {
               href="https://github.com/Ankit-india"
               target="_blank"
             >
+              {/* <i class="fa-brands text-4xl fa-github"></i> */}
               <i class="fa-brands text-4xl fa-github"></i>
             </a>
             <a
@@ -73,7 +91,8 @@ const Banner = () => {
               <i class="fa-brands text-4xl  fa-linkedin-in"></i>
             </a>
             <a className=" hover:bg-blue-600 border cursor-pointer  px-3 py-4 w-16 h-16  rounded-full flex justify-center items-center bg-gray-800">
-              <i class="fa-brands text-4xl  fa-facebook"></i>
+              {/* <i class="fa-brands text-4xl  fa-facebook"></i> */}
+              <i class="fa-brands text-4xl fa-x-twitter"></i>
             </a>
 
             <a
@@ -85,12 +104,14 @@ const Banner = () => {
             </a>
           </div>
           <br />
-          <a
-            className=" text-2xl px-3  py-2 bg-blue-500 hover:text-blue-600  rounded-full shadow-lg"
-            href="/contact"
+          <button
+            className="text-2xl px-3 py-2 bg-blue-500 hover:text-blue-600 rounded-full shadow-lg"
+            onClick={handleContactMeClick}
           >
             Contact Me
-          </a>
+          </button>
+
+          {isModalOpen && <ContactModal onClose={handleCloseModal} />}
         </div>
       </div>
       <div className=" w-full flex justify-center">
