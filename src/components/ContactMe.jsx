@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const ContactMe = () => {
+const ContactMe = ({ onClose }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -131,7 +131,7 @@ const ContactMe = () => {
             <button
               className="m-2 flex justify-end items-end text-1xl px-3 py-2 text-white bg-blue-500 hover:text-blue-600 rounded-full shadow-lg"
               //   onClick={handleContactMeClick}
-              onClick={handleContactMeClick}
+              onClick={handleContactMeClick && onClose}
             >
               Submit
             </button>

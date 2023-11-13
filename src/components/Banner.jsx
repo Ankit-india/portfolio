@@ -13,8 +13,8 @@ const Banner = () => {
         "Backend Developer",
         "Frontend Developer",
         "Mobile App Developer",
-      ], // Strings to display
-      // Speed settings, try diffrent values untill you get good results
+      ],
+
       startDelay: 300,
       typeSpeed: 50,
       backSpeed: 10,
@@ -22,17 +22,10 @@ const Banner = () => {
       loop: true,
     });
 
-    // Destropying
     return () => {
       typed.destroy();
     };
   }, []);
-
-  // const [contactMe, setContactMe] = useState(false);
-
-  // const handleContactMeClick = () => {
-  //   setContactMe(true);
-  // };
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -64,7 +57,7 @@ const Banner = () => {
               Backend Developer
             </span>
           </h2>
-          <p className="">
+          {/* <p className="">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             Repellendus, nemo. Omnis quis reprehenderit aspernatur culpa
             inventore rem, illum iure optio et blanditiis quia alias
@@ -72,7 +65,7 @@ const Banner = () => {
             exercitationem omnis numquam vero nesciunt explicabo incidunt vel
             eaque a repellat nisi, debitis repudiandae excepturi quasi
             praesentium id!
-          </p>
+          </p> */}
 
           <div className="icons-container flex space-x-5">
             <a
@@ -115,7 +108,10 @@ const Banner = () => {
         </div>
       </div>
       <div className=" w-full flex justify-center">
-        <img className="rounded-full my-2 shadow-lg w-fit" src={bannerImage} />
+        <img
+          className="rounded-full my-2 shadow-lg shadow-black w-fit"
+          src={bannerImage}
+        />
       </div>
     </div>
   );

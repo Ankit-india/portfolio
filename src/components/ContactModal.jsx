@@ -9,7 +9,7 @@ const ContactModal = ({ onClose }) => {
         <button className="modal-close-button" onClick={onClose}>
           <i class="fa-solid text-black border p-1 fa-x"></i>
         </button>
-        <ContactMe />
+        <ContactMe onClose={onClose}/>
       </div>
     </div>
   );
